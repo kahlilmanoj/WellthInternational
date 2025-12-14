@@ -480,9 +480,15 @@ h2::after {
     font-size: 3.5em;
     margin-bottom: 20px;
     display: block;
+
+    /* Apply Button Gradient */
+    background: linear-gradient(135deg, #E8B923 0%, #E8C468 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     color: #E8B923;
-    /* Direct theme color for font icons */
-    /* filter: grayscale(100%) brightness(1.5) sepia(100%) hue-rotate(10deg) saturate(3); Removed emoji filter */
+    /* Fallback */
+
     text-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
 }
 
@@ -636,6 +642,28 @@ h2::after {
     border-color: rgba(212, 175, 55, 0.3);
 }
 
+.contact-card strong {
+    /* Apply Button Gradient */
+    background: linear-gradient(135deg, #E8B923 0%, #E8C468 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #E8B923;
+}
+
+.contact-icon {
+    font-size: 2em;
+    margin-bottom: 15px;
+    display: block;
+
+    /* Apply Button Gradient */
+    background: linear-gradient(135deg, #E8B923 0%, #E8C468 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #E8B923;
+}
+
 .avatar {
     width: 120px;
     height: 120px;
@@ -701,10 +729,20 @@ h2::after {
 }
 
 .advantage-card h4 {
-    color: #E8B923;
     margin-bottom: 15px;
     font-size: 1.3em;
-    font-weight: 600;
+
+    /* Apply Button Gradient */
+    background: linear-gradient(135deg, #E8B923 0%, #E8C468 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: #E8B923;
+}
+
+.advantage-card i {
+    margin-right: 10px;
+    /* Icons inherit gradient from h4 if inside, but explicit is safer if structure varies */
 }
 
 .advantage-card p {
@@ -788,7 +826,8 @@ h2::after {
 /* Footer */
 footer {
     background: #000000;
-    color: #E8B923;
+    color: #FFFFFF;
+    /* Reverted to white */
     text-align: center;
     padding: 30px 20px;
     position: relative;
