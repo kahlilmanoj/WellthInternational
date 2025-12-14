@@ -7,7 +7,8 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WELLTH INTERNATIONAL - Premium Gymnasium &amp; Wellness Centre</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <link rel="stylesheet" href="css/styles.css?v=clean">
 </head>
 
 <body>
@@ -326,6 +327,16 @@
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Weight Plate Parallax Rotation Effect
+        window.addEventListener('scroll', function () {
+            const weightPlate = document.getElementById('weightPlate');
+            if (weightPlate) {
+                const scrollPosition = window.scrollY;
+                const rotationDegree = scrollPosition * 0.5; // Adjust rotation speed
+                weightPlate.style.transform = `rotate(${rotationDegree}deg)`;
             }
         });
     </script>
