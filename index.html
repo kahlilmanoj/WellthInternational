@@ -14,20 +14,27 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/styles.css?v=contact-fix">
+    <link rel="stylesheet" href="css/styles.css?v=compact-menu">
 </head>
 
 <body>
     <!-- Navigation -->
-    <nav id="navbar" class="scrolled">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#facilities">Facilities</a></li>
-            <li><a href="#advantages">Advantages</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#advantages">Advantages</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 
     <!-- Hero Section -->
@@ -178,7 +185,7 @@
     </section>
 
     <!-- Location Advantages -->
-    <section class="location-advantages">
+    <section id="advantages" class="location-advantages">
         <h2 class="reveal">Our Competitive Advantages</h2>
 
         <div class="advantage-grid">
@@ -232,7 +239,7 @@
 
         <div class="team-grid">
             <div class="team-card reveal">
-                <div class="avatar">KM</div>
+                <div class="avatar">AN</div>
                 <h3>Asif Nasser</h3>
                 <p class="role">Chief Executive Officer</p>
                 <p>MSc Sports Business &amp; Management - University of Liverpool, UK. B.Tech Computer Science.
@@ -374,6 +381,25 @@
         });
 
         document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // Mobile Hamburger Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        const links = document.querySelectorAll('.nav-links li');
+
+        hamburger.addEventListener('click', () => {
+            // Toggle Nav
+            navLinks.classList.toggle('nav-active');
+            hamburger.classList.toggle('toggle');
+        });
+
+        // Close menu when a link is clicked
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('nav-active');
+                hamburger.classList.remove('toggle');
+            });
+        });
 
 
     </script>
