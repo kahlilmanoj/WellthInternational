@@ -659,6 +659,18 @@ h2::after {
     color: #FFFFFF;
 }
 
+.contact-card a {
+    color: #FFFFFF;
+    text-decoration: none;
+    /* Optional: removes underline if desired, or keep it */
+    transition: color 0.3s;
+}
+
+.contact-card a:hover {
+    color: #E8B923;
+    /* Gold hover effect */
+}
+
 .contact-card strong {
     color: #E8B923;
 }
