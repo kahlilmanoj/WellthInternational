@@ -1039,9 +1039,9 @@ html {
         font-size: 1.1em;
         /* Smaller font for compact box */
         border: none;
-        background: transparent;
+        /* background: transparent; Removed to allow gradient text */
         opacity: 1;
-        /* Reset opacity as we are fading the whole box */
+        /* Reset opacity */
         padding: 10px 0;
         width: 100%;
         text-align: center;
